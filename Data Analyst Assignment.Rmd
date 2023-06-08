@@ -1,0 +1,103 @@
+---
+title: "Data Analyst Assignment"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+<br>
+
+## Assignment Overview
+
+In this assignment, you will connect to an SQLite database containing information about patients tested for MRSA, CDI, and COVID-19. You will run some analytics on the data and develop insights into the patient distribution, infection rates, and treatment effectiveness.
+
+NOTE: Please remember to load in any packages you plan to use for your analysis.
+
+
+<br>
+<br>
+
+
+## Task 1: Connect to the Database
+Your first task is to connect to the SQLite database infection.db using the RSQLite package. Once you've established a connection, list the tables in the database. You can find the SQL file located in the same zip file as this assignment.
+
+```{r}
+# Your code here
+
+```
+
+<br>
+
+## Task 2: Load the Data into Data Frames
+Next, write a query to select all data from each of the three tables: MRSA, CDI, and COVID19. Store the result of each query in a separate data frame.
+
+```{r}
+# Your code here
+
+```
+
+Variable Description:
+
+* patient_identifier: the unique patient id
+* age: current age in years
+* unit: the name of unit where patient was staying at when got tested, format: "floor level - facility name" (There are 10 different facilities in the tables)
+* room: the room number where patient was staying at when got tested
+* bed: the bed code where patient was staying at when got tested
+* result: the test result: Positive or Negative
+* treatment: the medicines patient was treated
+
+<br>
+
+## Task 3: Analyze the Data
+Now, perform some basic analysis on each data frame. This could include (but not limited to):
+
+1. Count the number of patients in each facility.
+2. Identify the unit with the highest number of positive results in each facility.
+3. Calculate the infection rate for each disease (infection rate = number of positive results/total number of results).
+
+Feel free to be creative during this section and come up with some unique ways to interpret and analyze the data.
+
+```{r}
+# Your code here
+
+```
+
+<br>
+
+## Task 4: Develop Insights
+Based on your analysis and visualization, develop some insights into the data. Discuss any patterns or trends you observed, any surprising results, and any limitations or potential improvements to your analysis. 
+
+```{r}
+# Your code/insights here
+
+```
+
+\newpage
+
+<br>
+<br>
+
+## Submission Methods 
+You can submit your assignment as a RMarkdown file, PDF, HTML, or Word document.
+
+To generate a PDF, HTML, or Word document from your RMarkdown file, click on the "Knit" button in the RStudio toolbar and select the output format you want.
+
+If you choose to submit PDF, HTML, or Word document, please make sure we can see both the results and your code(with echo = TRUE in your RMarkdown chunks). This is crucial for our review process.
+
+
+### Alternative Submission Methods and Programming Languages
+We acknowledge the diverse skills of our participants, so you are welcome to complete this assignment using the programming language of your choice. The provided RMarkdown file is simply a guide. You may choose to use Python, Julia, SQL, SAS, or any other language that you are comfortable with and that can effectively interact with the SQLite database.
+
+The medium of your assignment submission can also vary. If you choose not to use the provided RMarkdown file, please ensure that your chosen medium is clear, well-organized, and accessible for the selection committee. Some examples of alternative submissions include:
+
+Hosting a temporary website: Create a website to present your assignment. The website should clearly display your code, output, visualizations, and insights. Ensure that the website is live and accessible by the selection committee until the review process is complete.
+
+Sharing a GitHub repo: You can push your code, along with any generated outputs and visualizations, to a public GitHub repository. Make sure to include a README file explaining the structure of your repo and how to run your code.
+
+Sharing a Kaggle notebook: You can develop your assignment in a Kaggle notebook. Make sure the notebook is public and can be accessed by the selection committee.
+
+Please include the link to your website, GitHub repo, Kaggle notebook, or any other chosen medium when you submit your assignment.
+
